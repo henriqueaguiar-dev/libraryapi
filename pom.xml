@@ -2,33 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>4.1.0-M1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.henriqueaguiar</groupId>
 	<artifactId>libraryapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>libraryapi</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
+
+	<url>https://github.com/henriqueaguiar-dev/libraryapi</url>
 	<licenses>
-		<license/>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
 	</licenses>
+
 	<developers>
-		<developer/>
+		<developer>
+			<id>henriqueaguiar</id>
+			<name>Henrique Aguiar</name>
+			<email>rickdf7@gmail.com</email>
+			<url>https://github.com/henriqueaguiar-dev</url>
+		</developer>
 	</developers>
+
 	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
+		<connection>scm:git:https://github.com/henriqueaguiar-dev/libraryapi.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:henriqueaguiar-dev/libraryapi.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/henriqueaguiar-dev/libraryapi</url>
 	</scm>
+
+
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -53,11 +70,13 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-micrometer-tracing-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
