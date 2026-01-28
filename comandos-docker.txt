@@ -1,0 +1,5 @@
+# Run container Postgre version 18-bookworm
+docker run --name librarydb -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library -p 5432:5432 -d --network library-network postgres:18-bookworm
+
+# Run Pgadmin 4
+docker run --name pgadmin4 -e PGADMIN_DEFAULT_EMAIL=rickdf7@gmail.com -e PGADMIN_DEFAULT_PASSWOR=admin -p 15432:80 -d --network library-network dpage/pgadmin4
