@@ -103,7 +103,6 @@ class LivroRepositoryTest {
     }
 
     @Test
-    @Transactional
     void BuscarLivroTeste(){
         UUID id = UUID.fromString("e215dee6-e7b1-4f0d-9d33-89d4126a6946");
         Livro livro = livroRepository.findById(id).orElse(null);
