@@ -2,10 +2,8 @@ package com.henriqueaguiar.libraryapi.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,7 +29,6 @@ public class Autor {
     @Column(name= "nacionalidade", length = 50, nullable = false)
     private String nacionalidade;
 
-    //@OneToMany(mappedBy = "autor")
-    @Transient
+    @OneToMany(mappedBy = "autor")
     private List<Livro> livros;
 }
