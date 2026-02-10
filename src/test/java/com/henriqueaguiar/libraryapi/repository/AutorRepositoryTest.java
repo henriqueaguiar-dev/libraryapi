@@ -147,4 +147,5 @@ public class AutorRepositoryTest {
         List<Livro> lista = livroRepository.findByIsbn(preco + titulo);
         lista.forEach(System.out::println);
     }
+
 }

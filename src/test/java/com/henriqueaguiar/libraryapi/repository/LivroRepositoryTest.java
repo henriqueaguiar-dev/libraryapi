@@ -113,4 +113,38 @@ class LivroRepositoryTest {
 
     }
 
+    @Test
+    void listarLivrosComQueryJPQL(){
+        var resultado = livroRepository.listarTodosOrdenadoPorTituloAndPreco();
+        resultado.forEach(System.out::println);
+    }
+
+    @Test
+    void listarAutoresComQueryJPQL(){
+        var autores = livroRepository.listarAutoresDosLivros();
+        autores.forEach(System.out::println);
+    }
+
+    @Test
+    void listarTiulosNaoRepetidosDosLivros(){
+        var titulos = livroRepository.listarNomesDiferentesLivros();
+        titulos.forEach(System.out::println);
+    }
+
+    @Test
+    void listarNacionalidadeDeLivros(){
+        var nacionalidade = livroRepository.listarNacionalidadeDiferentesLivros();
+        nacionalidade.forEach(System.out::println);
+    }
+
+    @Test
+    void deletePorGeneroTest(){
+        livroRepository.deleteByGenero(GeneroLivro.FANTASIA);
+    }
+
+    @Test
+    void udateDataPublicacaoTest(){
+        livroRepository.updateDataPublicacao(LocalDate.of(1950, 10, 10));
+    }
+
 }
