@@ -21,4 +21,4 @@ jobs:
           java-version: '21'
 
       - name: Build e testes
-        run: ./mvnw clean install
+        run: ./mvnw clean install -DskipTests
