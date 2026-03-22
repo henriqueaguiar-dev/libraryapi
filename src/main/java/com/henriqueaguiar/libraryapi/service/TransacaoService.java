@@ -25,26 +25,23 @@ public class TransacaoService {
 
         // salva o autor
         Autor autor = new Autor();
-        autor.setNome("Victoria");
-        autor.setNacionalidade("England");
+        autor.setNome("Josefa");
+        autor.setNacionalidade("United States");
         autor.setDataNascimento(LocalDate.of(1900, 10, 19));
 
         autorRepository.save(autor);
 
         // salva o livro
         Livro livro = new Livro();
-        livro.setIsbn("966587-8asdsad");
-        livro.setPreco(BigDecimal.valueOf(150));
+        livro.setIsbn("966587-83345");
+        livro.setPreco(BigDecimal.valueOf(30));
         livro.setGenero(GeneroLivro.BIOGRAFIA);
-        livro.setTitulo("Vivendo na America");
+        livro.setTitulo("Good Dream");
         livro.setDataPublicacao(LocalDate.of(2000, 1, 30));
 
         livro.setAutor(autor);
 
         livroRepository.save(livro);
 
-        if (autor.getNome().equals("Victoria")) {
-            throw new RuntimeException("Rollback!");
-        }
     }
 }

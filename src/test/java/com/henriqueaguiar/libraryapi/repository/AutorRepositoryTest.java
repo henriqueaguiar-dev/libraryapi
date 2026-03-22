@@ -135,7 +135,7 @@ public class AutorRepositoryTest {
 
     @Test
     public void PesquisaPorISBNTeste(){
-        List<Livro> lista = livroRepository.findByIsbn("dd333-8asdsad");
+        List<Livro> lista = livroRepository.findByIsbn("b0d54316-5a9c-4877-8051-318977b33072");
         lista.forEach(System.out::println);
     }
 
