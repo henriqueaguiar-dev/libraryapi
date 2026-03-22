@@ -1,6 +1,9 @@
 comandos-docker.txt
 comandos-sql.txt
 requisitos.txt
+.gitignore
+.gitattributes
+.github
 # Compiled class file
 *.class
 
