@@ -135,8 +135,8 @@ public class AutorRepositoryTest {
 
     @Test
     public void PesquisaPorISBNTeste(){
-        List<Livro> lista = livroRepository.findByIsbn("b0d54316-5a9c-4877-8051-318977b33072");
-        lista.forEach(System.out::println);
+        Optional<Livro> livro = livroRepository.findByIsbn("b0d54316-5a9c-4877-8051-318977b33072");
+        livro.ifPresent(System.out::println);
     }
 
     @Test
@@ -144,8 +144,8 @@ public class AutorRepositoryTest {
         var preco = BigDecimal.valueOf(83);
         var titulo = "Descoberta do Horizonte";
 
-        List<Livro> lista = livroRepository.findByIsbn(preco + titulo);
-        lista.forEach(System.out::println);
+        Optional<Livro> livro = livroRepository.findByIsbn(preco + titulo);
+        livro.ifPresent(System.out::println);
     }
 
 }
